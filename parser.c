@@ -12,6 +12,7 @@ static void	add_to_lst(t_item **head, t_item *new)
 		while (tmp->next != NULL)
 			tmp = tmp->next;
 		tmp->next = new;
+		new->prev = tmp;
 	}
 }
 
@@ -30,11 +31,13 @@ t_item	**build_items_list(char **av)
 		if ((tmp = malloc(sizeof(t_item))) == NULL)
 			return (NULL);
 		tmp->text = av[i];
-		tmp->selected = 0;
+		tmp->selected = -1;
 		tmp->next = NULL;
+		tmp->prev = NULL;
 		add_to_lst(head, tmp);
 		i++;
 	}
-	tmp->next = *head;	
+	tmp->next = *head;
+	(*head)->prev = tmp;
 	return (head);
 }

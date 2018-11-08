@@ -14,7 +14,7 @@ NAME = ft_select
 
 SRC_PATH = ./
 
-SRC_NAME = main.c util2.c tools.c parser.c
+SRC_NAME = main.c util2.c tools.c parser.c signal_handling.c render_display.c
 
 OBJ_PATH = obj
 
