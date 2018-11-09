@@ -3,7 +3,13 @@
 
 void	resize_handler(void)
 {
-
+	if (ioctl(0, TIOCGWINSZ, &(g_display.win_sz)) == -1)
+	{
+		ft_printf("ioctl request error\n");
+		exit(1);
+	}
+	clear_our_mess();
+	render_display();
 }
 
 void	signal_dispatcher(int signo)
@@ -30,5 +36,8 @@ void	set_signals(void)
 {
 	
 	if (signal(SIGINT, signal_dispatcher) ==  SIG_ERR)
+		ft_printf("error\n");
+
+	if (signal(SIGWINCH, signal_dispatcher) ==  SIG_ERR)
 		ft_printf("error\n");
 }

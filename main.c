@@ -26,13 +26,13 @@ void	print_lst(void)
 
 void	init_display(int ac, char **av)
 {	
+	g_display.count = 0;
 	g_display.head = build_items_list(av);
 	if (g_display.head == NULL)
 	{
 		ft_printf("malloc error\n");
 		exit(1);
 	}
-	g_display.count = (size_t)ac - 1;
 	g_display.current = *(g_display.head);
 	if (ioctl(0, TIOCGWINSZ, &(g_display.win_sz)) == -1)
 	{
@@ -43,21 +43,23 @@ void	init_display(int ac, char **av)
 int main(int ac, char **av)
 {
 	struct termios 	term;
-	char 		key[3];
+	char 		key[100];
+	int		read_count;
 
 	if (ac < 2)
 		return (0);
-	ft_bzero(key, 3);
+	ft_bzero(key, 100);
 	init_display(ac, av);
 	init_tcap();
 	set_signals();
 	render_display();
-	while (read(0, key, 3))
+	while ((read_count = read(0, key, 100)) > 0)
 	{
+		
 		clear_our_mess();
-		map_key(key);
+		map_key(key, read_count);
 		render_display();
-		ft_bzero(key, 3);
+		ft_bzero(key, 100);
 	}
 	restore_tcap();
 }

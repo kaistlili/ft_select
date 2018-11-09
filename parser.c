@@ -28,13 +28,18 @@ t_item	**build_items_list(char **av)
 	i = 1;
 	while (av[i] != NULL)
 	{
-		if ((tmp = malloc(sizeof(t_item))) == NULL)
-			return (NULL);
-		tmp->text = av[i];
-		tmp->selected = -1;
-		tmp->next = NULL;
-		tmp->prev = NULL;
-		add_to_lst(head, tmp);
+//		if (ft_strlen(av[i]) != 0)
+//		{
+			g_display.count = g_display.count + 1;
+			if ((tmp = malloc(sizeof(t_item))) == NULL)
+				return (NULL);
+			tmp->text = av[i];
+			tmp->len = ft_strlen(av[i]);
+			tmp->selected = -1;
+			tmp->next = NULL;
+			tmp->prev = NULL;
+			add_to_lst(head, tmp);
+//		}
 		i++;
 	}
 	tmp->next = *head;

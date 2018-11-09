@@ -15,7 +15,6 @@ int	switch_tcap(int flag)
 	static 	struct	termios	termios_st;
 	static	struct	termios	save;
 
-	term = getenv("TERM");
 	if (flag)
 	{
 		clear_our_mess();
@@ -24,6 +23,7 @@ int	switch_tcap(int flag)
 	
 		return (0);
 	}
+	term = getenv("TERM");
 	if ((term == NULL) || (tgetent(NULL, term) <= 0))
 	{
 		ft_printf("TERM is null\n");
@@ -53,37 +53,13 @@ int	restore_tcap(void)
 	return(switch_tcap(1));
 }
 
-
-void	map_esc(char buff[2])
-{
-	if (buff[1] == 0)
-	{
-		restore_tcap();
-		exit(1);
-	}
-	if (!ft_strncmp(buff,"[D", 2))
-	{
-	}
-	else if (!ft_strncmp(buff,"[A",2))
-	{
-		g_display.current = g_display.current->prev;
-	}
-	else if (!ft_strncmp(buff,"[C",2))
-	{
-	}
-	else if (!ft_strncmp(buff,"[B",2))
-	{
-		g_display.current = g_display.current->next;
-	} 
-}
-
 void	delete_current(void)
 {
 	t_item *save;
 
 	save = g_display.current->next;
 	if (g_display.current == *(g_display.head))
-		g_display.head = &(g_display.current);
+		*(g_display.head) = save;
 	g_display.current->prev->next = g_display.current->next;
 	g_display.current->next->prev = g_display.current->prev;
 	free(g_display.current);
@@ -96,12 +72,41 @@ void	delete_current(void)
 	}
 }
 
-void	map_key(char buff[3])
+void	map_esc(char *buff, int read_count)
+{
+	if (!ft_strcmp(tgetstr("kD", NULL), buff))
+	{
+		delete_current();
+	} 
+	if (read_count == 1)
+	{
+		restore_tcap();
+		exit(1);
+	}
+	if (!ft_strncmp(buff + 1,"[D", 2))
+	{
+	}
+	else if (!ft_strncmp(buff + 1,"[A",2))
+	{
+		g_display.current = g_display.current->prev;
+	}
+	else if (!ft_strncmp(buff + 1,"[C",2))
+	{
+	}
+	else if (!ft_strncmp(buff + 1,"[B",2))
+	{
+		g_display.current = g_display.current->next;
+	}
+}
+
+
+void	map_key(char *buff, int read_count)
 {
 	if (buff[0] == 27)
-		map_esc(&buff[1]);
-	if (buff[0] == ' ')
+		map_esc(buff, read_count);
+	else if (buff[0] == ' ')
 		g_display.current->selected = -g_display.current->selected;
-	if ((buff[0] == 127) || (buff[0] == 8))
+	else if (buff[0] == 127)
 		delete_current();
 }
+
