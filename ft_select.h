@@ -23,6 +23,8 @@ typedef	struct	s_display
 	t_item		*current;
 	size_t		count;
 	struct	winsize	win_sz;
+	unsigned int	lines_wrote;
+	int		f_writing;
 }		t_display;
 
 extern	t_display	g_display;

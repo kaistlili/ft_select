@@ -18,7 +18,7 @@ int	switch_tcap(int flag)
 	if (flag)
 	{
 		clear_our_mess();
-		tputs(tgetstr("ve", NULL), 1, ft_iputchar) ; 
+//		tputs(tgetstr("ve", NULL), 1, ft_iputchar) ; 
 		tcsetattr(0, TCSANOW, &save);
 	
 		return (0);
@@ -29,7 +29,7 @@ int	switch_tcap(int flag)
 		ft_printf("TERM is null\n");
 		return (-1);
 	}
-	tputs(tgetstr("vi", NULL), 1, ft_iputchar) ; 
+//	tputs(tgetstr("vi", NULL), 1, ft_iputchar) ; 
 	if (tcgetattr(0, &termios_st) != 0)
 		return (-1);
 	ft_memcpy(&save, &termios_st, sizeof(struct termios));

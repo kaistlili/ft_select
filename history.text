@@ -1,0 +1,1000 @@
+  724  ./ft_select 
+  725  reset
+  726  ./ft_select 
+  727  make
+  728  ./ft_select 
+  729  reset
+  730  ls
+  731  man ioctl
+  732  man termios
+  733  man console_codes
+  734  echo -e "\033[6n"
+  735  ;1R
+  736  echo -e "\033[6n"
+  737  sh
+  738  echo -e "\033[6n"
+  739  man echo
+  740  bash &
+  741  kill -9 5410
+  742  ls
+  743  make
+  744  ./ft_select 
+  745  make
+  746  ./ft_select 
+  747  reset
+  748  make
+  749  ./ft_select 
+  750  make
+  751  reset && ./ft_select 
+  752  make
+  753  reset && ./ft_select 
+  754  make
+  755  reset && ./ft_select 
+  756  make && reset && ./ft_select 
+  757  reset && ./ft_select 
+  758  reset
+  759  ls
+  760  fls
+  761  ./ft_select 
+  762  reset
+  763  make
+  764  ./ft_select 
+  765  reset
+  766  ls
+  767  ls -l
+  768  ./ft_select 
+  769  reset
+  770  make
+  771  make re
+  772  make
+  773  ./ft_select 
+  774  reset
+  775  make 
+  776  ./ft_select 
+  777  reset && ./ft_select 
+  778  make
+  779  ./ft_select 
+  780  reset && make 
+  781  make
+  782  ./ft_select 
+  783  reset && make
+  784  ./ft_select 
+  785  make
+  786  ./ft_select 
+  787  make
+  788  ./ft_select 
+  789  make
+  790  ./ft_select 
+  791  make
+  792  ./ft_select 
+  793  make
+  794  ./ft_select 
+  795  make
+  796  ./ft_select 
+  797  reset 
+  798  ./ft_select 
+  799  ldas;dlasldas
+  800  ./ft_select 
+  801  make
+  802  ./ft_select 
+  803  man ncurses
+  804  reset
+  805  htop
+  806  top
+  807  sudo apt-install htop
+  808  sudo apt-get install htop
+  809  htop
+  810  ls
+  811  man ioctl
+  812  ls /
+  813  ls -l /
+  814  cd /usr/include/sys/
+  815  cd /usr/include/
+  816  ls
+  817  cd ../
+  818  ls
+  819  cd lib/
+  820  ls
+  821  cd /
+  822  ls
+  823  cd sys/include
+  824  cd s
+  825  cd usr/include/linux/
+  826  ls
+  827  cd sys
+  828  vi ioctl.h 
+  829  cd asm
+  830  cd /usr/include/asm/
+  831  cd /
+  832  ls
+  833  cd root/
+  834  sudo cd root
+  835  su
+  836  su 
+  837  ls
+  838  cd usr/
+  839  ls
+  840  cd s
+  841  cd sbin/
+  842  ls
+  843  cd ..
+  844  ls
+  845  man ioctl
+  846  man ioctl.h
+  847  man -a ioctl.h
+  848  where ioctl.h
+  849  whereis
+  850  whereis ioctl.h
+  851  whereis ioctl.c
+  852  cd us
+  853  cd /usr
+  854  ls
+  855  cd include/
+  856  ls
+  857  gcc -v
+  858  gcc -v | grep "usr"
+  859  clang -v
+  860  cd /usr/lib/
+  861  ls
+  862  cd ..
+  863  ls
+  864  find . -name "ioctl.h"
+  865  vi include/x86_64-linux-gnu/asm/ioctl.h
+  866  vi include/asm-generic/ioctl.h 
+  867  vi sys/ioctl.h
+  868  cd ~
+  869  vi /usr/include/x86_64-linux-gnu/sys/ioctl.h 
+  870  pwd
+  871  cd /usr/include/x86_64-linux-gnu/
+  872  cd asm/
+  873  ls
+  874  vi ioctls.h 
+  875  vi ioctl.h
+  876  cd /usr/include/
+  877  cd asm-generic/
+  878  ls
+  879  vi ioctl.h
+  880  find /usr/ -name "ioctls.h"
+  881  find /usr/ -name "ttydefaults.h"
+  882  virtualbox &
+  883  sudo apt install torbrowser-launcher
+  884  printf "deb http://deb.debian.org/debian stretch-backports main contrib" > /etc/apt/sources.list.d/stretch-backports.list
+  885  sudo printf "deb http://deb.debian.org/debian stretch-backports main contrib" > /etc/apt/sources.list.d/stretch-backports.list
+  886  sudo apt update
+  887  sudo apt install torbrowser-launcher -t stretch-backports
+  888  sudo apt install torbrowser-launcher
+  889  sudo apt-get install torbrowser-launcher -t stretch-backports
+  890  sudo apt-get upgrade
+  891  sudo apt-get install torbrowser-launcher -t stretch-backports
+  892  sudo apt install torbrowser-launcher -t stretch-backports
+  893  apt install apt-transport-https
+  894  sudo apt install apt-transport-https
+  895  vi /etc/apt/sources.list
+  896  ls
+  897  sudo vi ~/save.txt /etc/apt/sources.list
+  898  apt update
+  899  gpg2 --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+  900  sudo gpg2 --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+  901  sudo apt update
+  902  sudo apt install tor deb.torproject.org-keyring
+  903  cat /etc/apt/sources.list
+  904  cat /etc/apt/sources.list.d/slack.list 
+  905  sudo printf "deb http://deb.debian.org/debian stretch-backports main contrib" > /etc/apt/sources.list.d/stretch-backports.list
+  906  cat /etc/apt/sources.list.d/slack.list 
+  907  touch /etc/apt/sources.list.d/stretch-backports.list
+  908  sudo touch /etc/apt/sources.list.d/stretch-backports.list
+  909  sudo printf "deb http://deb.debian.org/debian stretch-backports main contrib" > /etc/apt/sources.list.d/stretch-backports.list
+  910  su
+  911  cat /etc/apt/sources.list/*
+  912  ls /etc/apt/sources.list/
+  913  ls /etc/apt/sources.list.d/
+  914  sudo apt install torbrowser-launcher -t stretch-backports
+  915  su
+  916  sudo apt install torbrowser-launcher -t stretch-backports
+  917  su
+  918  sudo apt install torbrowser-launcher -t stretch-backports
+  919  cat /etc/apt/sources.list
+  920  su
+  921  torbrowser-launcher 
+  922  pwd
+  923  cd Bureau/42/ft_select/
+  924  ls
+  925  ls -lRa
+  926  clear
+  927  cd ~
+  928  cd bu
+  929  cd Bureau/
+  930  git clone https://github.com/Gegel85/norminette.git norminette_git
+  931  cd norminette_git/
+  932  ls
+  933  make
+  934  ls -l
+  935  ./norminette ~/Bureau/42/minishell/src/*
+  936  cd Bureau/42/ft_select/
+  937  ls
+  938  vi try1.c 
+  939  cd ../try1_ft_select/ && vim try1.c
+  940  cd ../ioctl_tests/
+  941  vi ft_select
+  942  vi ft_select.h
+  943  vi try1.c 
+  944  mv try1.c archive_try1.c
+  945  touch try1.c
+  946  vi try1.c 
+  947  vi ft_select.h
+  948  vi try1.c 
+  949  terminator &
+  950  cd Bureau/42/ft_select/
+  951  ls
+  952  ls -l
+  953  ./ft_select 
+  954  make
+  955  ls
+  956  cd ../try1_ft_select/
+  957  ./ft_select 
+  958  reset && man ioctl
+  959  cd /usr/include/
+  960  ls
+  961  cd x86_64-linux-gnu/
+  962  ls
+  963  cd sys/
+  964  ls -l | grep ioctl
+  965  vi ioctl.h 
+  966  vi ../bits/ioctl.h
+  967  vi ../bits/ioctls.h 
+  968  vi ioctl.h 
+  969  ls ../bits/ioctl*
+  970  ls ../bits/ioctl-types.h 
+  971  vim ../bits/ioctl-types.h 
+  972  vim ../bits/ioctls.h 
+  973  man ioctl
+  974  vim ../bits/ioctls.h 
+  975  vi ../asm/ioctl.h
+  976  vi ../asm/ioctls.h 
+  977  vim ../../asm-generic/ioctl.h
+  978  vim ../../asm-generic/ioctls.h
+  979  man -a ioct
+  980  man -a ioctl
+  981  vi ioctl.h 
+  982  cd ../bits/
+  983  ls
+  984  vi ioctl-types.h 
+  985  cd ~/Bureau/42/ft_select/
+  986  ls
+  987  cd ..
+  988  ls
+  989  mkdir ioctl_tests
+  990  cp try1_ft_select/* ioctl_tests/
+  991  cp -r try1_ft_select/* ioctl_tests/
+  992  cd ioctl_tests/
+  993  ls
+  994  man signal
+  995  make
+  996  ls
+  997  make
+  998  ./ft_select 
+  999  make
+ 1000  ./ft_select 
+ 1001  bash &
+ 1002  terminal &
+ 1003  terminator &
+ 1004  ./ft_select 
+ 1005  ls
+ 1006  man tgetint
+ 1007  make
+ 1008  ./ft_select 
+ 1009  ls
+ 1010  vi ft_select.h
+ 1011  ls -l
+ 1012  cp archive_try1.c tools.c
+ 1013  vi tools.
+ 1014  vi tools.c
+ 1015  vi archive_try1.c 
+ 1016  vi tools.c
+ 1017  vim tools
+ 1018  vim tools.c
+ 1019  q
+ 1020  vi Makefile 
+ 1021  vi util2.c
+ 1022  vi Makefile 
+ 1023  make
+ 1024  man 2 signal
+ 1025  make
+ 1026  ./ft_select 
+ 1027  make
+ 1028  ./ft_select 
+ 1029  make
+ 1030  ./ft_select 
+ 1031  make
+ 1032  ./ft_select 
+ 1033  make
+ 1034  ./ft_select 
+ 1035  reset
+ 1036  make
+ 1037  ./ft_select 
+ 1038  make
+ 1039  ./ft_select 
+ 1040  reset && make && ./ft_select 
+ 1041  make
+ 1042  ./ft_select 
+ 1043  make
+ 1044  ./ft_select 
+ 1045  reset
+ 1046  ./ft_select 
+ 1047  reset
+ 1048  ./ft_select 
+ 1049  make
+ 1050  ./ft_select 
+ 1051  reset
+ 1052  ./ft_select 
+ 1053  sh
+ 1054  reset && make 
+ 1055  make 
+ 1056  make
+ 1057  ./ft_select 
+ 1058  reset
+ 1059  make
+ 1060  ./ft_select 
+ 1061  sh
+ 1062  ./ft_select 
+ 1063  clear
+ 1064  reset && make
+ 1065  ./ft_select 
+ 1066  reset
+ 1067  make
+ 1068  ./ft_select 
+ 1069  make
+ 1070  ./ft_select 
+ 1071  make
+ 1072  ./ft_select 
+ 1073  reset
+ 1074  ./ft_select 
+ 1075  reset && make
+ 1076  ./ft_select 
+ 1077  ls
+ 1078  make
+ 1079  ./ft_select 
+ 1080  reset && ./ft_select 
+ 1081  reset && vi ft_select.h
+ 1082  make
+ 1083  ./ft_select 
+ 1084  clear
+ 1085  make
+ 1086  ./ft_select 
+ 1087  vim caca
+ 1088  ./ft_select 
+ 1089  reset && ./ft_select 
+ 1090  ./ft_select 
+ 1091  echo $INCLUDE
+ 1092  env | grep include
+ 1093  env | grep INCLUDE
+ 1094  ls -l ~/Bureau/
+ 1095  cd ~/Bureau/
+ 1096  git clone https://github.com/gittup/ncurses.git ncurses
+ 1097  cd ncurses/
+ 1098  ls
+ 1099  grep * "initscr"
+ 1100  grep * "initscr("
+ 1101  grep -R * "initscr("
+ 1102  clear && ls -l
+ 1103  cd ncurses/
+ 1104  ls
+ 1105  grep -R "initscr" *
+ 1106  cd base/
+ 1107  grep -R "initscr" *.c
+ 1108  vi lib_initscr.c 
+ 1109  man signal
+ 1110  man 7
+ 1111  man -a signal
+ 1112  echo -e "\033[6n"
+ 1113  ./f
+ 1114  reset && ./f
+ 1115  man select
+ 1116  ./f
+ 1117  ls -l; ls -lRa
+ 1118  cd ~/Bureau/42/
+ 1119  ls
+ 1120  ls -l
+ 1121  cd ioctl_tests/
+ 1122  ls
+ 1123  ./ft_select 
+ 1124  pwd
+ 1125  cd ~/Bureau/42/ioctl_tests/
+ 1126  ./ft_select 
+ 1127  echo 'ls'
+ 1128  echo `ls` 
+ 1129  ls
+ 1130  echo `caca`
+ 1131  echo `env -i`
+ 1132  echo `env -i toto`
+ 1133  echo < ls
+ 1134  ls | echo
+ 1135  ls > echo
+ 1136  ls
+ 1137  rm echo
+ 1138  echo << ls
+ 1139  ls
+ 1140  <<
+ 1141  cat << "toto|"
+ 1142  ls
+ 1143  echo `ls`
+ 1144  man set
+ 1145  set toto = `ls -l`
+ 1146  echo $toto
+ 1147  toto
+ 1148  echo toto
+ 1149  echo  $toto
+ 1150  set toto = 5
+ 1151  echo $toto
+ 1152  echo "$toto"
+ 1153  set
+ 1154  set | grep "toto"
+ 1155  set toto = "caca"
+ 1156  echo $toto
+ 1157  set | grep "toto"
+ 1158  bash
+ 1159  ls
+ 1160  more 
+ 1161  more save.txt 
+ 1162  more 'ls'
+ 1163  more `ls`
+ 1164  ls -l
+ 1165  ls 
+ 1166  more `ls -l`
+ 1167  more Bureau/
+ 1168  ls -l
+ 1169  more save.txt 
+ 1170  more VirtualBox\ VMs/
+ 1171  more Téléchargements/
+ 1172  more *
+ 1173  echo `ls -R`
+ 1174  ls -R
+ 1175  echo `ls -lRa`
+ 1176  ls
+ 1177  echo save.txt 
+ 1178  cat "alallala"
+ 1179  cat <(ls)
+ 1180  echo <(ls)
+ 1181  ls -l
+ 1182  cd Bureau/
+ 1183  ls
+ 1184  cd 42/
+ 1185  ls
+ 1186  cd Try1/
+ 1187  ls
+ 1188  ls -l
+ 1189  clear && ls -l
+ 1190  cat tools.c
+ 1191  ls
+ 1192  rm tools_tcaps.c archive_try1.c 
+ 1193  ls -l
+ 1194  cat util2.c 
+ 1195  clear && ls -l; 
+ 1196  vi try1.c 
+ 1197  make
+ 1198  ls
+ 1199  cp try1.c main.c
+ 1200  vi Makefile 
+ 1201  ls
+ 1202  vi main.c 
+ 1203  make
+ 1204  ls
+ 1205  cat try1.c 
+ 1206  vi try1.c 
+ 1207  ls
+ 1208  vi tools.c 
+ 1209  ls
+ 1210  touch parser.c
+ 1211  vi parser.c 
+ 1212  make
+ 1213  vi parser.c 
+ 1214  make
+ 1215  ls
+ 1216  cat Makefile 
+ 1217  vi Makefile 
+ 1218  make
+ 1219  vi parser.c 
+ 1220  make
+ 1221  ./f
+ 1222  vi parser.c 
+ 1223  make
+ 1224  ./ft_select 
+ 1225  ./ft_select choix1 choix2 choix3
+ 1226  make
+ 1227  ./ft_select choix1 choix2 choix3
+ 1228  make
+ 1229  ./ft_select 
+ 1230  ./ft_select c c 
+ 1231  make
+ 1232  ./ft_select c c 
+ 1233  ./ft_select c c x
+ 1234  ./ft_select 
+ 1235  ./ft_select x
+ 1236  ./ft_select choix 1, choix 2
+ 1237  ./ft_select x y z
+ 1238  vi parser.c 
+ 1239  make
+ 1240  ./ft_select 
+ 1241  ./ft_select x ty z
+ 1242  make
+ 1243  make re
+ 1244  ./ft_select 
+ 1245  ./ft_select x y z
+ 1246  make
+ 1247  cat try1.c 
+ 1248  ls
+ 1249  vi tools.c 
+ 1250  make
+ 1251  vi tools.c 
+ 1252  make
+ 1253  reset && make
+ 1254  vi tools.c 
+ 1255  ls
+ 1256  cd ar
+ 1257  cd ..
+ 1258  ls
+ 1259  cd archive/
+ 1260  ls
+ 1261  cd try1_ft_select/
+ 1262  ls
+ 1263  cat tools_tcaps.c 
+ 1264  vi tools_tcaps.c 
+ 1265  ls
+ 1266  cd bu
+ 1267  cd Bureau/
+ 1268  ls
+ 1269  cd 42/
+ 1270  ls
+ 1271  ls -l
+ 1272  ls -lt
+ 1273  mkdir archive
+ 1274  mv ioctl_tests/ try1_ft_select/ ft_select/ minishell/ Libft/ archive/
+ 1275  cp -R archive/ioctl_tests/ ./Try1
+ 1276  cd Try1/
+ 1277  ls
+ 1278  cat Makefile 
+ 1279  ls -l
+ 1280  vi ft_select.h
+ 1281  vi parser.c 
+ 1282  ls
+ 1283  vi ft_select.h
+ 1284  ls
+ 1285  vi tools.c 
+ 1286  vi main.c 
+ 1287  sh
+ 1288  ls
+ 1289  cd Bureau/42/tr
+ 1290  cd Bureau/42/Try1/
+ 1291  l
+ 1292  ls
+ 1293  cat parser.c 
+ 1294  cat ft_select.h
+ 1295  vi ft_select.h
+ 1296  make
+ 1297  clear
+ 1298  make
+ 1299  ls
+ 1300  vi Makefile 
+ 1301  make
+ 1302  clear
+ 1303  make
+ 1304  make re
+ 1305  make
+ 1306  ./ft_select 
+ 1307  ./ft_select choix1 choix2 
+ 1308  vi ft_select.h
+ 1309  make
+ 1310  ./ft_select 
+ 1311  ./ft_select choix1 choix2
+ 1312  ./ft_select *
+ 1313  vi ft_select.h
+ 1314  makle
+ 1315  make
+ 1316  ./ft_select 
+ 1317  ./ft_select *
+ 1318  ./ft_select x
+ 1319  ./ft_select 
+ 1320  ./ft_select sasa ds
+ 1321  make
+ 1322  ./ft_select 
+ 1323  ./ft_select x s
+ 1324  make
+ 1325  ./ft_select 
+ 1326  ./ft_select x1 x2
+ 1327  make
+ 1328  ./ft_select x1 x2
+ 1329  make
+ 1330  ./ft_select x1 x2
+ 1331  ./ft_select *
+ 1332  ./ft_select /*
+ 1333  ls -l /
+ 1334  ls -1 /
+ 1335  clear
+ 1336  vi ft_select.h
+ 1337  make
+ 1338  ./ft_select c1 c2 c3
+ 1339  grep "handler_resize" *
+ 1340  grep "handler_resize" *.c
+ 1341  head Makefile 
+ 1342  cat Makefile 
+ 1343  grep "handler" util2.c tools.c parser.c 
+ 1344  grep "handler_resize" *.c
+ 1345  ls
+ 1346  vi try1.c 
+ 1347  ls
+ 1348  vi tools.c 
+ 1349  grep "handler" *
+ 1350  grep "handler" *.c
+ 1351  vim tools.c 
+ 1352  ls
+ 1353  cd ~/Bureau/42/
+ 1354  ls
+ 1355  mkdir git
+ 1356  cd git/
+ 1357  git clone https://github.com/kaistlili/ft_select.git ft_select
+ 1358  cp -R ../Try1/* ./
+ 1359  ls
+ 1360  cp -R ../Try1/* ./ft_select/
+ 1361  ls
+ 1362  cd ft_select/
+ 1363  ls
+ 1364  make fclean
+ 1365  git add *
+ 1366  git commit -m "first commit yo" 
+ 1367  git push
+ 1368  ls
+ 1369  make
+ 1370  make clean
+ 1371  make
+ 1372  ./ft_select c1 c2 c3
+ 1373  make fclean && make 
+ 1374  ls -l
+ 1375  ./ft_select 
+ 1376  c1 c2 c3 
+ 1377  ./ft_select c1 c2  3c
+ 1378  make
+ 1379  make fclean && make
+ 1380  ls
+ 1381  ./ft_select 
+ 1382  ./ft_select c1 c2 c3
+ 1383  ls
+ 1384  touch sig_handler.c
+ 1385  vi sig_handler.c 
+ 1386  man termios
+ 1387  make
+ 1388  make fclean
+ 1389  make
+ 1390  ./ft_select 
+ 1391  ./ft_select c1 c2 c3
+ 1392  exit
+ 1393  ps -aux | grep "select"
+ 1394  kill -9 12655
+ 1395  exit
+ 1396  sudo apt update
+ 1397  sudo qpt full-upgrqde
+ 1398  sudo apt full-upgrade 
+ 1399  cd Bureau/42/ft_select_git/
+ 1400  ls
+ 1401  ./ft_select choix1 choix2 choix3
+ 1402  make
+ 1403  make re
+ 1404  man tgetent
+ 1405  man termcaps
+ 1406  man termcap
+ 1407  ./ft_select 
+ 1408  ./ft_select x y z 
+ 1409  clear
+ 1410  ./ft_select c y u
+ 1411  clear
+ 1412  ./ft_select c1 c2 c3
+ 1413  clear
+ 1414  ./ft_select c1 c2 c3
+ 1415  clear
+ 1416  ls
+ 1417  ./ft_select *
+ 1418  make
+ 1419  ./ft_select *
+ 1420  clear
+ 1421  ./ft_select *
+ 1422  ls
+ 1423  valgrind --tool=memcheck --leak-check=full ./ft_select 
+ 1424  valgrind --tool=memcheck --leak-check=full ./ft_select *
+ 1425  clear
+ 1426  ./ft_select *
+ 1427  cd ~/Bureau/42/
+ 1428  ls
+ 1429  cd ft_select_git/
+ 1430  ./ft_select *
+ 1431  make
+ 1432  ./ft_select *
+ 1433  clear
+ 1434  ./ft_select *
+ 1435  ./ft_select 1 2 3
+ 1436  cd Bureau/42/
+ 1437  ls
+ 1438  cd git/
+ 1439  ls
+ 1440  make
+ 1441  make re
+ 1442  cd ft_select/
+ 1443  ls
+ 1444  make
+ 1445  make re
+ 1446  ls
+ 1447  pwd
+ 1448  cd ..
+ 1449  cd ~/
+ 1450  ls
+ 1451  cd ~/Bureau/42/ft_select_git/
+ 1452  ls
+ 1453  vi parser.c 
+ 1454  ./f
+ 1455  grep "reinit" *
+ 1456  grep "init" *
+ 1457  vi ft_select.h 
+ 1458  make
+ 1459  vi ft_select.h 
+ 1460  ls
+ 1461  make
+ 1462  ./ft_select 
+ 1463  ./ft_select c1 c2 c3
+ 1464  make
+ 1465  ./ft_select 
+ 1466  ./ft_select c1 c2 c3
+ 1467  ./ft_select c1
+ 1468  make
+ 1469  vi ft_select.h
+ 1470  make
+ 1471  ./ft_select 
+ 1472  ./ft_select c1 c2 c3
+ 1473  reset
+ 1474  make
+ 1475  ./ft_select 
+ 1476  ./ft_select c1 c2 c3
+ 1477  make
+ 1478  ./ft_select c1 c2
+ 1479  make 
+ 1480  reset && ./ft_select 
+ 1481  ./ft_select c1 c2
+ 1482  man termios
+ 1483  reset && man termios
+ 1484  make
+ 1485  ./ft_select 
+ 1486  ./ft_select c1 c2 c
+ 1487  reset && make
+ 1488  ./ft_select 
+ 1489  ./ft_select c1 c2 c3
+ 1490  opdqmwopd qwedqwdsqwdw;.q   w   d 
+ 1491  ls
+ 1492  clear
+ 1493  ls
+ 1494  ./ft_select c1 c2 c3
+ 1495  ls
+ 1496  vi ft_select.h
+ 1497  make
+ 1498  vi Makefile 
+ 1499  make
+ 1500  cat main | grep "signal.h"
+ 1501  cat main.c 
+ 1502  reset && make re
+ 1503  vi ft_select.h 
+ 1504  make
+ 1505  ./ft_select c1 c2 3
+ 1506  vi ft_select.h
+ 1507  vi Makefile 
+ 1508  vi ft_select.h
+ 1509  vi tools.c 
+ 1510  vi render_display.c 
+ 1511  vi tools.c 
+ 1512  grep "ioctl" *
+ 1513  ls
+ 1514  vi ft_select.h
+ 1515  make fclean && make
+ 1516  ./ft_select *
+ 1517  make && ./ft_select 
+ 1518  make && ./ft_select **
+ 1519  make
+ 1520  ./ft_select *
+ 1521  make
+ 1522  ./ft_select *
+ 1523  clear
+ 1524  ./ft_select
+ 1525  clear
+ 1526  valgrind --tool=memcheck --leak-check=full ./ft_select 
+ 1527  valgrind --tool=memcheck --leak-check=full ./ft_select 1
+ 1528  ./ft_select *
+ 1529  make
+ 1530  clear
+ 1531  ./ft_select *
+ 1532  clear
+ 1533  ./ft_select *
+ 1534  clear
+ 1535  cat ft_select.h
+ 1536  grep "ws_" *
+ 1537  ls
+ 1538  ls -1
+ 1539  cat ft_select.h
+ 1540  ./ft_select *
+ 1541  ./ft_select 
+ 1542  make && ./ft_select *
+ 1543  make
+ 1544  ./ft_select *
+ 1545  make
+ 1546  ./ft_select *
+ 1547  ./ft_select 1 2 3
+ 1548  grep "sc" *.c
+ 1549  ./ft_select *
+ 1550  ./ft_select < /dev/random
+ 1551  ./ft_select << /dev/random
+ 1552  psa,d
+ 1553  cat /dev/random | ./ft_select
+ 1554  cat /dev/urandom | ./ft_select 
+ 1555  cat /dev/urandom 
+ 1556  ls
+ 1557  ./ft_select *
+ 1558  make
+ 1559  make fclean && make
+ 1560  ./ft_select *
+ 1561  clear
+ 1562  make
+ 1563  ./ft_select *
+ 1564  make
+ 1565  ./ft_select *
+ 1566  make
+ 1567  ./ft_select *
+ 1568  make
+ 1569  ./ft_select *
+ 1570  make
+ 1571  ./ft_select *
+ 1572  make
+ 1573  ./ft_select *
+ 1574  make
+ 1575  ./ft_select *
+ 1576  clear
+ 1577  ./ft_select *
+ 1578  clear
+ 1579  ls
+ 1580  resret
+ 1581  make
+ 1582  ./ft_select *
+ 1583  clear
+ 1584  make
+ 1585  ./ft_select *
+ 1586  make
+ 1587  ./ft_select *
+ 1588  make
+ 1589  ./ft_select *
+ 1590  make
+ 1591  ./ft_select *
+ 1592  make
+ 1593  ./ft_select *
+ 1594  make
+ 1595  ./ft_select *
+ 1596  make
+ 1597  ./ft_select *
+ 1598  make
+ 1599  ./ft_select *
+ 1600  make
+ 1601  ./ft_select *
+ 1602  ./ft_select 1 2 3
+ 1603  make
+ 1604  ./ft_select *
+ 1605  make
+ 1606  reset
+ 1607  ./ft_select 1 2 3
+ 1608  ./ft_select 1
+ 1609  ./ft_select *
+ 1610  sdasda
+ 1611  ./ft_select 1
+ 1612  ./ft_select *
+ 1613  ./ft_select 1 2 3 4 5 6 7 8
+ 1614  ./ft_select *
+ 1615  ./ft_select 1 2 3 4 
+ 1616  ./ft_select 1 2 3 4
+ 1617  ./ft_select 1 2 3 4 5
+ 1618  ./ft_select 1 2 3 4 5 6
+ 1619  make
+ 1620  clear
+ 1621  ./ft_select 1 2 3 4 5
+ 1622  ./ft_select 1 2 3 4 5 6
+ 1623  make
+ 1624  ./ft_select 1 2 3 4 5
+ 1625  reset && ./ft_select 1 2 3 4 5
+ 1626  ./ft_select 1 2 3 4 5 67 
+ 1627  ./ft_select 1 2 3 4 5 6 7 
+ 1628  ./ft_select 1 2 3 4 5 6 
+ 1629  ./ft_select 1 2 3 4 5 6 7 8 9
+ 1630  ./ft_select 1 2 3 4 5 6 7 8 9 10
+ 1631  ./ft_select 1 2 3 4 5 6 7
+ 1632  ./ft_select 1 2 3 4 5 6 
+ 1633  ./ft_select 1 2 3 4 5 
+ 1634  ./ft_select 1 2 3 4 5 6
+ 1635  make
+ 1636  ./ft_select 1 2 3 4 5 6 7
+ 1637  ./ft_select 1 2 3 4 5
+ 1638  make
+ 1639  ./ft_select *
+ 1640  ./ft_select 1 2 3 4 5
+ 1641  make
+ 1642  ./ft_select 1 2 3 4 5
+ 1643  make
+ 1644  ./ft_select 1 2 3 4 5
+ 1645  ./ft_select 1 2 3 4 5 6
+ 1646  ./ft_select 1 2 3 4 5 6 7
+ 1647  make
+ 1648  ./ft_select 1 2 3 4 5 6 7
+ 1649  ./ft_select 1 2 3 4 5 6 7 8 9 10
+ 1650  ./ft_select 1 2 3 4 5 6 7 8 9 10 11 12 13 45 45 65
+ 1651  ./ft_select 1 2 3 4 5 6 7
+ 1652  ./ft_select 1 2 3 4 5 6 7 8
+ 1653  ./ft_select 1 2 3 4 5 6 7 8 9 10
+ 1654  ./ft_select 1 2 3 4 5 6 7
+ 1655  make
+ 1656  ./ft_select 1 2 3 4 5 6 7
+ 1657  make
+ 1658  ./ft_select 1 2 3 4 5 6 7
+ 1659  make
+ 1660  ./ft_select 1 2 3 4 5 6 7
+ 1661  ./ft_select 1 2 3 4 5 6 7 8 9 10 55 66 55 5 4 4 4 4 4 44 4 44 4 44 4 44 4 4 44 3
+ 1662  ./ft_select 1 2 3 4 5 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7  7 7 7 7
+ 1663  ./ft_select 1 2 3 4 5 6 7 8 9 10 55 66 55 5 4 4 4 4 4 44 4 44 4 44 4 44 4 4 44 3
+ 1664  make
+ 1665  ./ft_select 1 2 3 4 5 6 7 8 9 10 55 66 55 5 4 4 4 4 4 44 4 44 4 44 4 44 4 4 44 3
+ 1666  make
+ 1667  ./ft_select 1 2 3 4 5 6 7 8 9 10 55 66 55 5 4 4 4 4 4 44 4 44 4 44 4 44 4 4 44 3
+ 1668  ./ft_select 1 2 3 4 5 6 7 8 9 10 12
+ 1669  ./ft_select 1 2 3 4 5 61111 7 8 9 10 12
+ 1670  ./ft_select 1 2 3 4 5 6 7 8 9 10 55 66 55 5 4 4 4 4 4 44 4 44 4 44 4 44 4 4 44 3
+ 1671  make
+ 1672  ./ft_select 1 2 3 4 5 6 7 8 9 10 55 66 55 5 4 4 4 4 4 44 4 44 4 44 4 44 4 4 44 3
+ 1673  ./ft_select *
+ 1674  ls
+ 1675  clear
+ 1676  ls
+ 1677  sh
+ 1678  ls
+ 1679  ./ft_select *
+ 1680  ./ft_select 1
+ 1681  ./ft_select 1 2 3 4 5
+ 1682  ls
+ 1683  vi test
+ 1684  vi test.c
+ 1685  ./ft_select *
+ 1686  ./ft_select s l " " lsl l
+ 1687  make
+ 1688  ./ft_select *
+ 1689  make
+ 1690  ./ft_select *
+ 1691  make
+ 1692  ./ft_select *
+ 1693  ./ft_select 1 2 3 4 5 6 7 8
+ 1694  ./ft_select 1 2 3
+ 1695  make
+ 1696  ./ft_select 1 2 3
+ 1697  ./ft_select 1 2
+ 1698  ./ft_select 1 2 3
+ 1699  make
+ 1700  ./ft_select 1 2 3
+ 1701  make
+ 1702  ./ft_select *
+ 1703  ls
+ 1704  ./ft_select 1 2
+ 1705  ./ft_select 1 2 3
+ 1706  reset
+ 1707  make
+ 1708  ./ft_select 1 2
+ 1709  ls
+ 1710  make
+ 1711  ./ft_select 1 2
+ 1712  make
+ 1713  ./ft_select 
+ 1714  ./ft_select 11 2
+ 1715  ./ft_select *
+ 1716  make
+ 1717  ./ft_select *
+ 1718  ls -1
+ 1719  ./ft_select *
+ 1720  keycheck 
+ 1721  key
+ 1722  history
+ 1723  history > history.text

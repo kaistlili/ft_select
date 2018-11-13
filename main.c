@@ -52,13 +52,15 @@ int main(int ac, char **av)
 	init_display(ac, av);
 	init_tcap();
 	set_signals();
+	g_display.f_writing = 0;
+//	tputs(tgetstr("sc", NULL), g_display.win_sz.ws_col, ft_iputchar);
 	render_display();
 	while ((read_count = read(0, key, 100)) > 0)
 	{
-		
 		clear_our_mess();
 		map_key(key, read_count);
-		render_display();
+		if (!g_display.f_writing)
+			render_display();
 		ft_bzero(key, 100);
 	}
 	restore_tcap();

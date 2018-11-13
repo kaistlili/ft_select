@@ -1,6 +1,16 @@
 #include "ft_select.h"
 #include <signal.h>
 
+void	scroll_lines_up(int n_lines)
+{
+	while (n_lines)
+	{
+		tputs(tgetstr("sr", NULL), 1, ft_iputchar);
+		tputs(tgetstr("up", NULL), 1, ft_iputchar);
+		n_lines--;
+	}
+}
+
 void	resize_handler(void)
 {
 	if (ioctl(0, TIOCGWINSZ, &(g_display.win_sz)) == -1)
@@ -8,6 +18,11 @@ void	resize_handler(void)
 		ft_printf("ioctl request error\n");
 		exit(1);
 	}
+	if (g_display.f_writing)
+	{return;}
+	if (g_display.win_sz.ws_row < g_display.lines_wrote){
+		ft_printf("case 2 %d %d\n", g_display.win_sz.ws_row, g_display.lines_wrote);exit(1);}
+//		scroll_lines_up(g_display.lines_wrote - g_display.win_sz.ws_row);}
 	clear_our_mess();
 	render_display();
 }

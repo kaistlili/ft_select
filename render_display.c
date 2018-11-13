@@ -60,10 +60,10 @@ void	reinit_cursor()
 {
 	int	count;
 
-	if (g_display.count < g_display.win_sz.ws_row)
-		count = g_display.count /*- 1*/;	
+	if (g_display.count <= g_display.win_sz.ws_row)
+		count = g_display.count - 1;	
 	else
-		count = g_display.win_sz.ws_row/* - 1*/;
+		count = g_display.win_sz.ws_row - 1;
 	while (count > 0)
 	{
 		count--;
@@ -72,23 +72,39 @@ void	reinit_cursor()
 	tputs(tgetstr("cr", NULL), 1, ft_iputchar);
 }
 
-void	clear_our_mess(void)
+void	up_n_lines(int n_lines)
 {
 	int	count;
 
+//	n_lines--;
+	while (n_lines-- > 0)
+{		tputs(tgetstr("up", NULL), 1, ft_iputchar);
+
+//		tputs(tgetstr("sr", NULL), 1, ft_iputchar);
+}
+	tputs(tgetstr("cr", NULL), 1, ft_iputchar);
+}
+
+void	clear_our_mess(void)
+{
+	tputs(tgetstr("cd", NULL), 1, ft_iputchar);
+/*
+	int	count;
+
 	if (g_display.count < g_display.win_sz.ws_row)
-		count = g_display.count/* - 1*/;
+		count = g_display.count - 1;
 	else
-		count = g_display.win_sz.ws_row /* - 1 */ ;
-		tputs(tgetstr("cd", NULL), 1, ft_iputchar);
+		count = g_display.win_sz.ws_row  - 1  ;
 	while (count > 0)
 	{
 		count--;
 		tputs(tgetstr("do", NULL), 1, ft_iputchar);
+		tputs(tgetstr("cr", NULL), 1, ft_iputchar);
+		tputs(tgetstr("ce", NULL), 1, ft_iputchar);
 
 	}
 	tputs(tgetstr("cr", NULL), 1, ft_iputchar);
-	reinit_cursor();
+	reinit_cursor();*/
 }
 
 int	text_tot_len(void)
@@ -155,7 +171,7 @@ int	get_nbr_columns(void)
 			return (0);
 		ws_col_left = ws_col_left - next_maxlen;
 		if (start == *(g_display.head))
-			return (cols);
+			return (cols++);
 	}
 	return (cols);	
 }
@@ -166,7 +182,7 @@ int	nbr_columns(void)
 	t_item	*start;
 
 	start = g_display.current; 
-	if ((g_display.count + 1) > g_display.win_sz.ws_row)
+	if ((g_display.count) > g_display.win_sz.ws_row)
 	{
 		return(get_nbr_columns());
 	}
@@ -175,10 +191,21 @@ int	nbr_columns(void)
 	return (1);
 }
 
-void	next_col(int toskip)
+void	scroll_n_lines(int n_lines, int to_scroll, char *direction)
+
 {
-		
+	int	count;
+
+	while (n_lines-- > 0)
+{	
+		tputs(tgetstr("up", NULL), 1, ft_iputchar);
+		if (n_lines <= to_scroll)
+			tputs(tgetstr("sr", NULL), 1, ft_iputchar);
 }
+	tputs(tgetstr("cr", NULL), 1, ft_iputchar);
+}
+
+/* we need to figure out why cursor reinit is broken */
 
 void	render_display(void)
 {
@@ -192,29 +219,40 @@ void	render_display(void)
 //	if (
 	if ((col = nbr_columns()) == 0)
 	{
+//		ft_printf("not enough space");
+//		tputs(tgoto(tgetstr("ch", NULL), 0, padding), 1, ft_iputchar);
 		return;
 	}
+	g_display.f_writing = 1;
 	count = 0;
 	start = *(g_display.head);
 	tmp = start; // col counter
 	ws_row = g_display.win_sz.ws_row;
 	while (count < g_display.count)
 	{
-		if (((count % ws_row) == 0) && (count != 0))
-		{
-			padding = padding + text_max_len(&tmp, ws_row) + 2;
-			reinit_cursor();
-		}
-		else 
-		{
-			tputs(tgetstr("do",NULL), 1, ft_iputchar);
-		}
 		tputs(tgoto(tgetstr("ch", NULL), 0, padding), 1, ft_iputchar);
-	//	write(1,"*",1);
 		print_item(start);
-	//	write(1,"5",1);
 		start = start->next;
 		count++;
+		if (count != g_display.count)
+		{
+			if (((count % ws_row) == 0) && (count != 0))
+			{
+				padding = padding + text_max_len(&tmp, ws_row) + 2;
+				up_n_lines((count - 1) % ws_row );
+			}
+			else	
+				tputs(tgetstr("do",NULL), 1, ft_iputchar);
+		}	
 	}
-	reinit_cursor();
+//	tputs(tgetstr("rc", NULL), g_display.win_sz.ws_col, ft_iputchar);
+	//up_n_lines((count - 1) % ws_row );
+	//if (g_display.win_sz.ws_row > ws_row){ exit(1);
+	//	scroll_n_lines((count -1) % ws_row, g_display.win_sz.ws_row - ws_row, "up");}
+//	else
+		up_n_lines((count - 1) % ws_row);
+	g_display.lines_wrote = count % ws_row;
+//	reinit_cursor();
+
+	g_display.f_writing = 0;
 }
