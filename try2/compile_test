@@ -1,0 +1,1 @@
+gcc test.c tools.c render_display.c lib/libft.a set_cursor.c -l ncurses -o test
