@@ -80,6 +80,7 @@ void	render_display(t_display display)
 	unsigned int	count;
 	unsigned int	*col;
 
+	tputs(tgoto(tgetstr("cm", NULL), 0, 0), 0, ft_iputchar);
 	count = 0;
 	if ((col = col_size(&display)) == NULL)
 	{
@@ -96,5 +97,5 @@ void	render_display(t_display display)
 		count++;	
 		set_cursor(display, count, col);
 	}
-//	free(col);
+	free(col);
 }

@@ -24,6 +24,8 @@ typedef	struct	s_display
 }		t_display;
 
 extern int	g_sigresize;
+extern int	g_foreground;
+
 
 int ft_iputchar(int c);
 int *ft_static_cursor();
@@ -39,3 +41,4 @@ void	clear_our_mess(void);
 void	set_cursor(t_display display, int current, unsigned int *col_len);
 void	restore_exit();
 struct	termios	*termios_set(void);
+void	signal_dispatcher(int signo);

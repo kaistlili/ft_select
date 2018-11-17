@@ -56,19 +56,17 @@ int main(int ac, char **av)
 	display.items = items;
 	if (init_display(&display, ac, av) == -1)
 		return (0);
-//	ft_printf("ws_col %u ws_row %u index at %u\n", display.win_sz.ws_col, display.win_sz.ws_row, display.index);
-//	print_items(&display);
 	init_tcap();
-	tputs(tgoto(tgetstr("cm", NULL), 0, 0), 0, ft_iputchar);
 	set_signals();
 	render_display(display);
 	while ((read_ret = read(0, key, 100)) >= 0)
 	{
-		if ((read_ret != 0) || (g_sigresize == 1))
+		if ((read_ret) || (g_sigresize) || (g_foreground))
 		{
 			if (ioctl(0, TIOCGWINSZ, &(display.win_sz)) == -1)
 				exit(1);
 			g_sigresize = 0;
+			g_foreground = 0;
 			map_key(key, read_ret, &display);
 			if (display.count == 0)
 				break;

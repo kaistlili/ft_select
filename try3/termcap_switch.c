@@ -19,7 +19,7 @@ static void		undo_caps(void)
 {	
 	tputs(tgetstr("te", NULL), 1, ft_iputchar);
 	clear_our_mess();
-	tputs(tgetstr("ve", NULL), 1, ft_iputchar);
+//	tputs(tgetstr("ve", NULL), 1, ft_iputchar);
 }
 
 struct termios	*termios_set(void)
@@ -52,7 +52,7 @@ int	init_tcap(void)
 		return (-1);
 	}
 	tputs(tgetstr("ti", NULL), 1, ft_iputchar);
-	tputs(tgetstr("vi", NULL), 1, ft_iputchar);
+//	tputs(tgetstr("vi", NULL), 1, ft_iputchar);
 	termios_st = termios_set();
 	termios_st->c_lflag &= ~(ICANON);
 	termios_st->c_cc[VMIN] = 0; /*min chars to read */
