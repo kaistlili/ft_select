@@ -8,6 +8,7 @@
 		no count left
 
 */
+
 int	switch_tcap(int flag)
 {
 	char 			*term;
@@ -55,61 +56,3 @@ int	restore_tcap(void)
 {
 	return(switch_tcap(1));
 }
-/*
-void	delete_current(void)
-{
-	t_item *save;
-
-	save = g_display.current->next;
-	if (g_display.current == *(g_display.head))
-		*(g_display.head) = save;
-	g_display.current->prev->next = g_display.current->next;
-	g_display.current->next->prev = g_display.current->prev;
-	free(g_display.current);
-	g_display.current = save;
-	g_display.count = g_display.count - 1;
-	if (g_display.count == 0)
-	{
-		restore_tcap();
-		exit(1);
-	}
-}
-
-void	map_esc(char *buff, int read_count)
-{
-	if (!ft_strcmp(tgetstr("kD", NULL), buff))
-	{
-		delete_current();
-	} 
-	if (read_count == 1)
-	{
-		restore_tcap();
-		exit(1);
-	}
-	if (!ft_strncmp(buff + 1,"[D", 2))
-	{
-	}
-	else if (!ft_strncmp(buff + 1,"[A",2))
-	{
-		g_display.current = g_display.current->prev;
-	}
-	else if (!ft_strncmp(buff + 1,"[C",2))
-	{
-	}
-	else if (!ft_strncmp(buff + 1,"[B",2))
-	{
-		g_display.current = g_display.current->next;
-	}
-}
-
-
-void	map_key(char *buff, int read_count)
-{
-	if (buff[0] == 27)
-		map_esc(buff, read_count);
-	else if (buff[0] == ' ')
-		g_display.current->selected = -g_display.current->selected;
-	else if (buff[0] == 127)
-		delete_current();
-}
-*/

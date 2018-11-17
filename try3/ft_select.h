@@ -38,3 +38,4 @@ void	map_key(char *buff, int read_count, t_display *display);
 void	clear_our_mess(void);
 void	set_cursor(t_display display, int current, unsigned int *col_len);
 void	restore_exit();
+struct	termios	*termios_set(void);

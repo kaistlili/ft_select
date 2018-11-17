@@ -66,7 +66,7 @@ int main(int ac, char **av)
 	{
 		if ((read_ret != 0) || (g_sigresize == 1))
 		{
-				if (ioctl(0, TIOCGWINSZ, &(display.win_sz)) == -1)
+			if (ioctl(0, TIOCGWINSZ, &(display.win_sz)) == -1)
 				exit(1);
 			g_sigresize = 0;
 			map_key(key, read_ret, &display);

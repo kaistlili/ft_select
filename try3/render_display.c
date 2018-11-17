@@ -75,35 +75,26 @@ unsigned int	*col_size(t_display *display)
 	return (cols_len);
 }
 
-int running = 0;
-
 void	render_display(t_display display)
 {
 	unsigned int	count;
 	unsigned int	*col;
 
-//	if (running){ft_printf("FATAL ERROR");exit(1);}
-	running = 1;
 	count = 0;
 	if ((col = col_size(&display)) == NULL)
 	{
 		clear_our_mess();
 		return;
 	}
-/*	else
-	{ft_printf("col %d", col);
-		tputs(tgoto(tgetstr("ch", NULL), 0, 0), 1, ft_iputchar);
-	return;
-	}*/
+	set_cursor(display, count, col);
 	while (count < display.count)
 	{
 		if (count == display.index)
 			print_item(display.items[count], 1, display.win_sz.ws_row);
 		else
 			print_item(display.items[count], 0, display.win_sz.ws_row);
-//		sleep(1);
 		count++;	
 		set_cursor(display, count, col);
 	}
-	running = 0;
+//	free(col);
 }
