@@ -7,7 +7,10 @@ void	print_item(t_item item, int current, unsigned int ws_col)
 	if (current)
 		tputs(tgetstr("us", NULL), 1, ft_iputchar);
 	tputs(tgetstr("ce", NULL), 1, ft_iputchar);
+	if ((item.color != NULL) && (item.selected < 0))
+		ft_putstr(item.color);
 	write(1, item.text, item.len);
+	ft_putstr(CREG);
 	if (item.selected > 0)
 		tputs(tgetstr("me", NULL), 1, ft_iputchar);
 	if (current)

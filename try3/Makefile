@@ -14,7 +14,7 @@ NAME = ft_select
 
 SRC_PATH = ./
 
-SRC_NAME = main.c set_cursor.c signal_handling.c parser.c render_display.c map_key.c termcap_switch.c 
+SRC_NAME = main.c new_map_key.c set_cursor.c signal_handling.c parser.c render_display.c map_key.c termcap_switch.c set_colors.c
 
 OBJ_PATH = obj
 
@@ -40,7 +40,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	mkdir -p $(OBJ_PATH)
-	$(GC) -I. $(FLAGS) -o $@ -c $<
+	$(GC)  $(FLAGS) -o $@ -c $<
 
 clean:
 	$(MAKE) -C ./lib/ clean

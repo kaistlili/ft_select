@@ -1,7 +1,15 @@
 #include "ft_select.h"
 #include <signal.h>
 
+/*
+	add shift+del to del all selected
+	add left and right to move between cols
+	add some colors
+	add tty checks
+	
 
+
+*/
 int	ft_iputchar(int c)
 {
 	if (write(1, &c, 1) < 0)
@@ -56,6 +64,7 @@ int main(int ac, char **av)
 	display.items = items;
 	if (init_display(&display, ac, av) == -1)
 		return (0);
+	set_colors(items, display.count);
 	init_tcap();
 	set_signals();
 	render_display(display);

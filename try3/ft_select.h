@@ -6,13 +6,34 @@
 #include <sys/ioctl.h>
 
 
+#define	CREG "\x1B[0m"
+#define	CRED "\x1B[31m"
+#define CGREEN "\x1B[32m"
+#define	CBLUE "\x1B[34m"
 
+
+typedef	enum		e_keypress
+{
+	K_UP, K_DO, K_LE, K_RI, K_SP, K_CR, K_DEL, K_BS, K_DELS, K_ESC
+}					t_keypress;
+
+
+typedef	struct		s_keycaps
+{
+	char	*up;
+	char	*down;
+	char	*left;
+	char	*right;
+	char	*backspace;
+	char	*del;
+}					t_keycaps;
 
 typedef	struct		s_item
 {
 	char  		*text;
 	int 		selected;
 	size_t		len;
+	char		*color;
 }			t_item;
 
 typedef	struct	s_display
@@ -26,6 +47,7 @@ typedef	struct	s_display
 extern int	g_sigresize;
 extern int	g_foreground;
 
+typedef	void (*t_keyaction)(t_display*);
 
 int		ft_iputchar(int c);
 int		init_tcap(void);
@@ -41,3 +63,18 @@ void	set_cursor(t_display display, int current, unsigned int *col_len);
 void	restore_exit();
 struct	termios	*termios_set(void);
 void	signal_dispatcher(int signo);
+void	set_colors(t_item *items, unsigned int count);
+
+
+//i
+
+void	delete_current(t_display *display);
+void	delete_item(t_display *display, int index);
+void	delete_selected(t_display *display);
+void	restore_exit(t_display *display);
+void	move_up(t_display *display);
+void	move_down(t_display *display);
+void	move_left(t_display *display);
+void	move_right(t_display *display);
+void	select_current(t_display *display);
+void	return_selected(t_display *display);

@@ -14,6 +14,7 @@ unsigned int	build_items_list(t_item items[], char **av)
 		{
 			items[j].text = av[i];
 			items[j].selected = -1;
+			items[j].color = NULL;
 			j++;
 		}
 		i++;
