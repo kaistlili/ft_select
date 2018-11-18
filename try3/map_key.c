@@ -3,6 +3,7 @@
 void	select_current(t_display *display)
 {
 	display->items[display->index].selected = -display->items[display->index].selected;
+	move_down(display);
 }
 
 void	delete_item(t_display *display, int index)
@@ -70,7 +71,14 @@ void	move_down(t_display *display)
 
 void	move_left(t_display *display)
 {
-
+	if (display->index < display->win_sz.ws_row) 
+	{
+		display->index = (display->index + ((display->count / display->win_sz.ws_row) * display->win_sz.ws_row));
+		if (display->index >= display->count)
+			move_left(display);
+	}
+	else
+		display->index = display->index - display->win_sz.ws_row;
 }
 
 void	move_right(t_display *display)
