@@ -27,11 +27,10 @@ extern int	g_sigresize;
 extern int	g_foreground;
 
 
-int ft_iputchar(int c);
-int *ft_static_cursor();
-int init_tcap(void);
-int restore_tcap(void);
-int fill_array(int ac, char **av, t_item items_list[ac]);
+int		ft_iputchar(int c);
+int		init_tcap(void);
+int		restore_tcap(void);
+int		fill_array(int ac, char **av, t_item items_list[ac]);
 unsigned int	build_items_list(t_item *items,char **av);
 void	set_signals(void);
 void	render_display(t_display display);

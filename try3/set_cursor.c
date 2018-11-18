@@ -15,6 +15,7 @@ void	set_cursor(t_display display, int current, unsigned int *col_len)
 	ws_row = display.win_sz.ws_row;
 	if (current == display.count)
 	{
+	//last item we reset cursor
 		i = 0;
 		tot = 0;	
 		tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
@@ -23,16 +24,11 @@ void	set_cursor(t_display display, int current, unsigned int *col_len)
 	if (((current % ws_row) == 0) && (current != 0))
 	{
 	//last in col
-		while ((current % ws_row) != 1)
-		{
-			tputs(tgetstr("up", NULL), 1, ft_iputchar);
-			current--;
-		}
+		tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
 		tot = tot + 2 + col_len[i];
 		i++;
 		tputs(tgoto(tgetstr("ch", NULL), 0,
 			 tot + ((col_len[i] - display.items[current].len) / 2)), 1, ft_iputchar);
-//		tputs(tgoto(tgetstr("ch", NULL), 0, tot), 1, ft_iputchar);
 	}
 	else
 	{

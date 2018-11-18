@@ -42,6 +42,7 @@ unsigned int
 			*cols_len = col_max_len;
 			cols_len++;
 			ret = ret + col_max_len;
+			col_max_len = 0;
 		}
 	}
 	return (ret);
@@ -69,12 +70,15 @@ unsigned int	*col_size(t_display *display)
 	tot_max_len = get_max_len(display->items, display->count, display->win_sz.ws_row, cols_len);	
 	if (tot_max_len > display->win_sz.ws_col)
 	{
+		ft_printf("tot max len %d col %d", tot_max_len, display->win_sz.ws_col);
 		free(cols_len);
 		return (NULL);
 	}	
 	return (cols_len);
 }
-
+/*
+	first element in multi col padding is broken
+*/
 void	render_display(t_display display)
 {
 	unsigned int	count;
