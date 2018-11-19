@@ -18,16 +18,11 @@ void	set_cursor(t_display display, unsigned int current, unsigned int *col_len)
 	ws_row = display.win_sz.ws_row;
 	if (current == display.count)
 	{
-	//last item we reset cursor
 		reinit_cursor(&col_index, &tot_pad);
-		col_index = 0;
-		tot_pad = 0;	
-		tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
 		return;
 	}
 	if (((current % ws_row) == 0) && (current != 0))
 	{
-	//last in col
 		tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
 		tot_pad = tot_pad + 2 + col_len[col_index];
 		col_index++;
