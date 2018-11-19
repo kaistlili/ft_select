@@ -11,23 +11,6 @@
 #define CGREEN "\x1B[32m"
 #define	CBLUE "\x1B[34m"
 
-/*
-typedef	enum		e_keypress
-{
-	K_UP, K_DO, K_LE, K_RI, K_SP, K_CR, K_DEL, K_BS, K_DELS, K_ESC
-}					t_keypress;
-
-*/
-typedef	struct		s_keycaps
-{
-	char	*up;
-	char	*down;
-	char	*left;
-	char	*right;
-	char	*backspace;
-	char	*del;
-}					t_keycaps;
-
 typedef	struct		s_item
 {
 	char  		*text;
@@ -52,7 +35,6 @@ typedef	void (*t_keyaction)(t_display*);
 int		ft_iputchar(int c);
 int		init_tcap(void);
 int		restore_tcap(void);
-int		fill_array(int ac, char **av, t_item items_list[ac]);
 unsigned int	build_items_list(t_item *items,char **av);
 void	set_signals(void);
 void	render_display(t_display display);
