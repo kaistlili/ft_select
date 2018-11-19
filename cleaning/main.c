@@ -6,10 +6,8 @@
 	add left and right to move between cols
 	add some colors
 	add tty checks
-	
-
-
 */
+
 int	ft_iputchar(int c)
 {
 	if (write(1, &c, 1) < 0)
@@ -43,14 +41,6 @@ int	init_display(t_display *display, char **av)
 	return (0);
 }
 
-void	clear_mess(int count)
-{
-	while (count > 1)
-	{
-		tputs(tgetstr("dl",NULL),0, ft_iputchar);
-		count--;
-	}
-}
 int main(int ac, char **av)
 {
 	char 		key[100];

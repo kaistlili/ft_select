@@ -7,7 +7,7 @@ int	g_foreground = 0;
 
 static void	resize_handler(void)
 {
-	g_sigresize = 1;
+	g_sigresize = 1;//while(42);
 }
 
 static	void	goto_background(void)

@@ -1,0 +1,1 @@
+gcc test.c termcap_switch.c map_key.c lib/libft.a -ltermcap -o test

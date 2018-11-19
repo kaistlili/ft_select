@@ -5,7 +5,8 @@ static	void	reinit_cursor(unsigned int *col_index, unsigned int *tot_pad)
 {
 	*col_index = 0;
 	*tot_pad = 0;	
-	tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
+//	tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
+	tputs(tgetstr("ho", NULL), 1, ft_iputchar);
 	return;
 }
 
@@ -23,7 +24,8 @@ void	set_cursor(t_display display, unsigned int current, unsigned int *col_len)
 	}
 	if (((current % ws_row) == 0) && (current != 0))
 	{
-		tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
+	//	tputs(tgoto(tgetstr("cm", NULL), 0, 0), 1, ft_iputchar);
+	tputs(tgetstr("ho", NULL), 1, ft_iputchar);
 		tot_pad = tot_pad + 2 + col_len[col_index];
 		col_index++;
 		tputs(tgoto(tgetstr("ch", NULL), 0,

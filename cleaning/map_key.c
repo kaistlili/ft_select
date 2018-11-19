@@ -6,10 +6,27 @@ void	restore_exit(t_display *display)
 	restore_tcap();
 	exit(1);
 }
-
+/*
 void	clear_our_mess(void)
 {
-	tputs(tgetstr("cd", NULL), 1, ft_iputchar);
+//	tputs(tgetstr("ho", NULL), 1, ft_iputchar);
+	tputs(tgetstr("cl", NULL), 1, ft_iputchar);
+//	tputs(tgetstr("ho", NULL), 1, ft_iputchar);
+}
+*/
+void	clear_our_mess(void)
+{	
+	struct	winsize	win_sz;
+
+	if (ioctl(0, TIOCGWINSZ, &win_sz) == -1)
+		restore_exit(NULL);
+	tputs(tgetstr("ho", NULL), 1, ft_iputchar);
+	while (win_sz.ws_row)
+	{
+		tputs(tgetstr("dl", NULL), 1, ft_iputchar);
+//		sleep(1);
+		win_sz.ws_row = win_sz.ws_row - 1;
+	}
 }
 
 void	select_current(t_display *display)

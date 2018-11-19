@@ -71,13 +71,20 @@ static unsigned int	*col_size(t_display *display)
 	return (cols_len);
 }
 
+int frames = 0;
 void	render_display(t_display display)
 {
 	unsigned int	count;
 	unsigned int	*col;
 
-	tputs(tgoto(tgetstr("cm", NULL), 0, 0), 0, ft_iputchar);
 	count = 0;
+	if ((display.win_sz.ws_col == 0) || (display.win_sz.ws_row == 0))
+	{
+		clear_our_mess();
+		return;
+//		ft_printf("DIVISION BY ZERO\n");
+//		exit(1);
+	}	
 	if ((col = col_size(&display)) == NULL)
 	{
 		clear_our_mess();

@@ -6,7 +6,7 @@
 #    By: ktlili <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/10 23:32:37 by ktlili            #+#    #+#              #
-#    Updated: 2018/10/06 19:30:38 by ktlili           ###   ########.fr        #
+#    Updated: 2018/11/19 14:35:53 by ktlili           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ LIB = ./lib/libft.a
 
 FLAGS = -ggdb -Wall -Wextra -Werror
 
-LFLAGS = -l ncurses
+LFLAGS =  -ltermcap
 
 GC = clang
 
