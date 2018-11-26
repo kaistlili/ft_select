@@ -21,7 +21,10 @@ void	clear_our_mess(t_display display)
 void	clear_our_mess(t_display display)
 {
 	unsigned int	to_del;
+	static	char	*dl = NULL;
 
+	if (dl == NULL)
+		dl = tgetstr("dl", NULL);
 	if (display.win_sz.ws_row == 0)
 		return;
 	to_del = display.count;
@@ -29,7 +32,7 @@ void	clear_our_mess(t_display display)
 		to_del  = display.win_sz.ws_row;
 	while (to_del)
 	{
-		tputs(tgetstr("dl", NULL), 1, ft_iputchar);
+		tputs(dl, 1, ft_iputchar);
 		to_del--;
 	}
 }

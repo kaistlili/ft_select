@@ -93,7 +93,7 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 
 INC = ft_printf.h get_next_line.h libft.h
 
-FLAGS = -ggdb -Wall -Wextra -Werror 
+FLAGS = -Wall -Wextra -Werror 
 
 SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
 

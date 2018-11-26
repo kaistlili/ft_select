@@ -22,7 +22,7 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 
 LIB = ./lib/libft.a
 
-FLAGS = -ggdb -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 LFLAGS =  -ltermcap
 

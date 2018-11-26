@@ -7,7 +7,7 @@ extern	int			g_writing;
 
 int	g_sigresize = 0;
 int	g_foreground = 0;
-/*
+
 static void	resize_handler(void)
 {
 //	if ((g_sigresize) || (g_writing))
@@ -18,7 +18,7 @@ static void	resize_handler(void)
 	render_display(*g_screen);
 	g_sigresize = 0;
 }
-*/
+
 static	void	goto_background(void)
 {
 	char	ctrl_z[2];
@@ -49,8 +49,8 @@ void	signal_dispatcher(int signo)
 		restore_tcap();
 		exit(1);
 	}
-//	else if (signo == SIGWINCH)
-//		resize_handler();
+	else if (signo == SIGWINCH)
+		resize_handler();
 	else if (signo == SIGTSTP)
 		goto_background();
 	else if (signo == SIGCONT)

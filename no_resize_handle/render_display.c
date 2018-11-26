@@ -14,19 +14,31 @@
 
 static	void	print_item(t_item item, unsigned int current)
 {
+	static	char	*mr = NULL;
+	static	char	*us = NULL;
+	static	char	*me = NULL;
+	static	char	*ue =  NULL;
+
+	if (mr == NULL)
+	{
+		mr = tgetstr("mr", NULL);
+		us = tgetstr("us", NULL);
+		me = tgetstr("me", NULL);
+		ue = tgetstr("ue", NULL);
+	}
 	if (item.selected > 0)
-		tputs(tgetstr("mr", NULL), 1, ft_iputchar);
+		tputs(mr, 1, ft_iputchar);
 	if (current)
-		tputs(tgetstr("us", NULL), 1, ft_iputchar);
-	tputs(tgetstr("ce", NULL), 1, ft_iputchar);
+		tputs(us, 1, ft_iputchar);
+//	tputs(tgetstr("ce", NULL), 1, ft_iputchar);
 	if ((item.color != NULL) && (item.selected < 0))
 		ft_putstr(item.color);
 	write(0, item.text, item.len);
 	ft_putstr(CREG);
 	if (item.selected > 0)
-		tputs(tgetstr("me", NULL), 1, ft_iputchar);
+		tputs(me, 1, ft_iputchar);
 	if (current)
-		tputs(tgetstr("ue", NULL), 1, ft_iputchar);
+		tputs(ue, 1, ft_iputchar);
 	
 }
 
@@ -77,7 +89,6 @@ static unsigned int	*col_size(t_display *display)
 	if (tot_max_len > display->win_sz.ws_col)
 	{
 	//	ft_printf("tot max len %d col %d", tot_max_len, display->win_sz.ws_col);
-		tputs(tgetstr("ho", NULL), 1, ft_iputchar);
 		free(cols_len);
 		return (NULL);
 	}	
@@ -94,8 +105,11 @@ void	render_display(t_display display)
 	count = 0;
 	if (((display.win_sz.ws_col == 0)
 			   || (display.win_sz.ws_row == 0)) ||  ((col = col_size(&display)) == NULL))
-	{ft_printf("not enough space");
-		return;}
+		{
+			ft_printf("not enough space");
+			tputs(tgetstr("ho", NULL), 1, ft_iputchar);
+			return;
+		}
 	set_cursor(display, count, col);
 	g_writing = 1;
 	while (count < display.count)

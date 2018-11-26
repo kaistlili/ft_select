@@ -62,7 +62,6 @@ int main(int ac, char **av)
 	int		read_ret;
 	t_item		items[ac];
 	t_display	display;
-	//struct	winsize	win_sz;
 
 	if (ac < 2)
 		return (0);
